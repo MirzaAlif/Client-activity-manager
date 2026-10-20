@@ -1,0 +1,16 @@
+{
+  "name": "client-activity-manager-frontend",
+  "private": true,
+  "description": "Only needed if you EDIT app.jsx. The prebuilt app.bundle.js already works without Node.",
+  "scripts": {
+    "build": "esbuild app.jsx --bundle --minify --jsx=automatic --define:process.env.NODE_ENV=\\\"production\\\" --outfile=app.bundle.js",
+    "watch": "esbuild app.jsx --bundle --jsx=automatic --define:process.env.NODE_ENV=\\\"development\\\" --outfile=app.bundle.js --watch"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}
